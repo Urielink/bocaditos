@@ -1,0 +1,43 @@
+<style>
+.over-bottom-banner {
+	position: fixed;
+	z-index: 3000;
+	bottom: 10%;
+	max-width: 1140px;
+	margin: 0px auto;
+	left: 1em;
+	right: 1em;
+	background: #191919;
+	padding: 1em;
+	text-align: center;
+	color:#fff;
+	font-size: 2em;
+}
+.over-bottom-banner.stay {
+	position: relative;
+	z-index: 1;
+	margin: 0px;
+	left: auto;
+	right: auto;
+	display: none;
+}
+</style>
+
+<div class="over-bottom-banner">
+	Texto de contenido
+	<br>
+	<a class="wpc-btn style-1 size-2" href="http://daracabados.com">¡Call to action!</a>
+	<br>
+	<a href="#close" class="text-white stay">Cerrar</a>
+</div>
+
+<script>
+jQuery(document).ready(function($){ 
+  if ( $( '.over-bottom-banner' ).length ) {
+    $('.over-bottom-banner a.stay').on('click',function(){ 
+      $('.over-bottom-banner').addClass('stay'); 
+      $(this).css('display','none'); 
+    }); 
+  }
+});
+</script>
